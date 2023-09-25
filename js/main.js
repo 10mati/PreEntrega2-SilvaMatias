@@ -1,4 +1,5 @@
 // SIMULADOR DE PRESTAMO PERSONAL
+/*
 const montoSolicitadoMax = 2000000;
 const montoSolicitadoMin = 10000;
 const interesCliente = 50;
@@ -131,7 +132,56 @@ if (preguntar == "SI") {
 }else {
     alert ("muchas gracias")
 }
-}
+} */
+
+// (Arrays de Objetos)
+
+//agregar nuevos modelos
+let dolar = 700;
+
+class nuevoModelos{
+    constructor ( marca, modelo, año){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = parseFloat(año);
+        this.preciou$ = parseFloat (this.preciou$)
+    }
+    }
+  
+const autosModelos = [
+{ marca:"wolkswagen", modelo:"T-crossOriginIsolated", anio:2022, preciou$:5000},
+{ marca:"wolkswagen", modelo:"Golf", anio:2023, preciou$:4000},
+{ marca:"wolkswagen", modelo:"Tiguan", anio:2021,preciou$:4500},
+{ marca:"Renault", modelo:"Clio", anio:2022, preciou$:5000},
+{ marca:"Renault", modelo:"Kangoo", anio:2022,preciou$:5000},
+{ marca:"Chevrolet", modelo:"Cruze", anio:2022,preciou$:5000},
+{ marca:"Chevrolet", modelo:"Onix", anio:2023,preciou$:5000},
+{ marca:"Ford", modelo:"Mustang", anio:2022,preciou$:5000},
+{ marca:"Ford", modelo:"Focus", anio:2020,preciou$:5000},
+]
+
+// Agregue un modelo nuevo
+autosModelos.push(new nuevoModelos ("Toyota", "Corolla", 2023, 4800));
+
+// Se vendio un modelo
+
+autosModelos.splice(8,1)
+console.log(autosModelos);
+
+// Cuantos modelos de autos tengo 
+
+for (let index = 0; index < autosModelos.length; index++) {
+    console.log(autosModelos [index].marca);
+  }
+  
+// Filtrar po modelo
+
+let autosford = autosModelos.filter (auto =>auto.marca ==="Renault");
+console.log(autosford);
+
+
+
+
 
 
 
